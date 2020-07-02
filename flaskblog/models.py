@@ -10,6 +10,7 @@ from flask_login import UserMixin
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 # we should import it for reset password
 #its reset token process pour le mot de passe 
+from sqlalchemy.dialects.postgresql import JSON
 
 
 

@@ -5,11 +5,14 @@ from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
 
+from flask_script import Manager
+from flask_migrate import Migrate, MigrateCommand
+
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://dlcsmeiwduhoxv:216d17a8a2b4e1192e74b90a619bfde254b09a75a67f0377269933c61d6edb82@ec2-34-200-15-192.compute-1.amazonaws.com:5432/dsf69v3i5tnv3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)   # initialisation a reproduire aussis sur cmd 
